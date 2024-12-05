@@ -7,20 +7,32 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>admin</h1>
-    <section>
+    <section class="header">
+      <h2>スタッフログイン</h2>
+    </section>
+    <section class="main">
       <h3>
         ※新規スタッフ、パスワードがわからなくなった人は各店舗責任者に連絡してください。
       </h3>
       <h4>BIYOUSHITSU 原宿店 責任者：吉田（090-1234-5678）</h4>
     </section>
-    <section>
-      <form action="">
-        <input type="sid" placeholder="スタッフID" />
-        <input type="spw" placeholder="パスワード" />
-        <button type="submit">ログイン</button
-        ><a href="staff-top.html">デバッグ用</a>
+    <section class="main">
+      <form action="" class="login-form">
+        <div>
+          <div>
+            <label for="sid">スタッフID：</label>
+            <input type="sid" placeholder="スタッフIDを入力してください" />
+          </div>
+          <div>
+            <label for="spw">パスワード：</label>
+            <input type="spw" placeholder="パスワードを入力してください" />
+          </div>
+          <div class="login-btn">
+            <button type="submit">ログイン</button>
+          </div>
+        </div>
       </form>
     </section>
+    <footer>&copy; 2024 itsumono All rights reserved.</footer>
   </body>
 </html>
