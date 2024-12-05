@@ -34,3 +34,9 @@
 - [参考記事]
   - 1. [URL をここに記入]
   - 2. [URL をここに記入]
+
+色の参考：
+https://saruwakakun.com/design/gallery/palette
+
+雪のアニメーション：
+https://animate-club.com/background/snow/
