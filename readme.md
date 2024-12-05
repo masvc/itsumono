@@ -46,3 +46,6 @@ https://animate-club.com/background/snow/
 
 写真の EXIF データから日時を読み取る方法：
 https://syncer.jp/php-exif-read-data
+
+アイコン：
+https://icooon-mono.com/

@@ -1,5 +1,5 @@
 (function () {
-  var COUNT = 300;
+  var COUNT = 100;
   var masthead = document.querySelector(".wrapper");
   var canvas = document.createElement("canvas");
   var ctx = canvas.getContext("2d");
