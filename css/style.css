@@ -14,13 +14,16 @@
 header {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 20px;
   background-color: var(--primary-color);
 }
 
 .logo {
-  font-size: 25px;
+  font-size: 30px;
   color: var(--background-color);
+  font-weight: bold;
+  font-family: "Verdana", sans-serif;
+  letter-spacing: 0.1px;
 }
 
 .login {
@@ -70,8 +73,9 @@ body.index {
 }
 
 img {
-  width: 300px;
+  width: 250px;
   border-radius: 10%;
+  padding: 10px;
 }
 
 .loginpage {
@@ -233,6 +237,7 @@ button.start-button {
   display: flex;
   justify-content: space-evenly;
   padding: 10px;
+  margin-top: 30px;
 }
 
 .control-nav-img {

@@ -1,7 +1,7 @@
 ---
 marp: true
 theme: gaia
-header: "いつものやつで"
+header: "itsumono"
 footer: "by **＠mas**"
 paginate: true
 style: |
@@ -23,7 +23,7 @@ style: |
 
 ![bg left:50%](img/talk.png)
 
-# 「いつものやつで」
+# itsumono
 
 ---
 

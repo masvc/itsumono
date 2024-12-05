@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/destyle.css" />
     <script src="js/main.js" defer></script>
-    <title>新規登録ページ</title>
+    <title>Register | itsumono</title>
 
     <style>
       .registerpage {
         background-color: #ffffff;
-        padding: 100px 20px;
+        padding: 50px 20px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
@@ -128,6 +128,13 @@
         margin: 15px;
         text-align: start;
       }
+
+      .back-button {
+        font-size: 14px;
+        color: var(--text-color);
+        margin: 10px;
+        border-bottom: 1px solid var(--text-color);
+      }
     </style>
   </head>
   <body>
@@ -184,7 +191,7 @@
           <div class="button-container">
             <button type="submit">新規登録</button>
             <button type="button" onclick="location.href='./index.html'">
-              <p>戻る</p>
+              <p class="back-button">戻る</p>
             </button>
           </div>
         </form>

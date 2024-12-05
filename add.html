@@ -6,59 +6,125 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/destyle.css" />
     <script src="js/main.js" defer></script>
-    <title>Document</title>
+    <title>Add | itsumono</title>
+    <style>
+      .addpage {
+        background-color: #ffffff;
+        padding: 50px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .page-title {
+        font-size: 24px;
+        margin-bottom: 50px;
+      }
+
+      input[type="file"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 10px auto;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        text-align: start;
+      }
+
+      button[type="submit"] {
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 15px;
+        margin: 10px auto;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .control-nav {
+        margin-top: 20px;
+      }
+
+      .control-nav-button {
+        margin: 5px;
+      }
+
+      .add-txt {
+        text-align: start;
+        margin: 5px;
+      }
+
+      .back-button {
+        font-size: 14px;
+        color: var(--text-color);
+        margin: 10px;
+        border-bottom: 1px solid var(--text-color);
+      }
+    </style>
   </head>
   <body>
     <header>
-      <div><h1 class="logo">いつものやつで</h1></div>
+      <div><h1 class="logo">itsumono</h1></div>
     </header>
 
     <main>
-      <h2>写真の追加はこちらから</h2>
-      <form action="/submit" method="POST" enctype="multipart/form-data">
-        <p>ヘアスタイル：</p>
-        <p>前髪の画像：</p>
-        <input type="file" name="front_image" />
-        <p>側面の画像：</p>
-        <input type="file" name="side_image" />
-        <p>後ろの画像：</p>
-        <input type="file" name="back_image" />
-        <p>その他の画像：</p>
-        <input type="file" name="other_image" />
-        <p>星の数：</p>
-        <select name="star">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <p>コメント：</p>
-        <textarea name="comment" cols="30" rows="10"></textarea>
-        <p>タグ：</p>
-        <select name="tag" multiple>
-          <!-- タグのオプションをここに追加 -->
-          <!-- ここphpでdbから選択肢持ってくる -->
-        </select>
-        <button type="submit">追加</button>
-        <button type="button" onclick="location.href='./home.html'">
-          <p>戻る</p>
-        </button>
-      </form>
-            <section class="control-nav"></section>
-        <button id="home-button" class="control-nav-button">
-          <img class="control-nav-img" src="img/home.png" alt="ホーム" />
-        </button>
-        <button id="add-button" class="control-nav-button">
-          <img class="control-nav-img" src="img/add.png" alt="追加" />
-        </button>
-        <button id="setting-button" class="control-nav-button">
-          <img class="control-nav-img" src="img/setting.png" alt="設定" />
-        </button>
-        <button id="logout-button" class="control-nav-button">
-          <img class="control-nav-img" src="img/logout.png" alt="ログアウト" />
-        </button>
-      </section>
+      <div class="addpage">
+        <div class="page-title">
+          <h2>写真の追加はこちらから</h2>
+        </div>
+        <form action="/submit" method="POST" enctype="multipart/form-data">
+          <p class="add-txt">フロント：</p>
+          <input type="file" name="front_image" />
+          <p class="add-txt">サイド：</p>
+          <input type="file" name="side_image" />
+          <p class="add-txt">バック：</p>
+          <input type="file" name="back_image" />
+          <p class="add-txt">その他：</p>
+          <input type="file" name="other_image" />
+          <p class="add-txt">星の数：</p>
+          <select name="star">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <p class="add-txt">コメント：</p>
+          <textarea name="comment" cols="30" rows="10"></textarea>
+          <p class="add-txt">タグ：</p>
+          <select name="tag" multiple>
+            <!-- タグのオプションをここに追加 -->
+            <!-- ここphpでdbから選択肢持ってくる -->
+          </select>
+          <button type="submit">追加</button>
+          <button type="button" onclick="location.href='./index.html'">
+            <p class="back-button">戻る</p>
+          </button>
+        </form>
+        <section class="control-nav">
+          <button id="home-button" class="control-nav-button">
+            <img class="control-nav-img" src="img/home.png" alt="ホーム" />
+          </button>
+          <button id="add-button" class="control-nav-button">
+            <img class="control-nav-img" src="img/add.png" alt="追加" />
+          </button>
+          <button id="setting-button" class="control-nav-button">
+            <img class="control-nav-img" src="img/setting.png" alt="設定" />
+          </button>
+          <button id="logout-button" class="control-nav-button">
+            <img
+              class="control-nav-img"
+              src="img/logout.png"
+              alt="ログアウト"
+            />
+          </button>
+        </section>
+      </div>
     </main>
   </body>
 </html>

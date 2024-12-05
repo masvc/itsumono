@@ -7,46 +7,107 @@
     <link rel="stylesheet" href="css/destyle.css" />
     <link rel="icon" href="img/icon.png" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <title>HOME | いつものやつで</title>
+    <title>HOME | itsumono</title>
+
+    <style>
+      .calender {
+        padding: 30px 20px 10px 20px;
+        text-align: center;
+      }
+
+      .year {
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .month {
+        margin: 10px;
+        border-bottom: 1px solid var(--text-color);
+        border-top: 1px solid var(--text-color);
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .month-number {
+        font-size: 20px;
+        margin: 10px;
+        background-color: var(--primary-color);
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+      }
+
+      .img-board {
+        margin: 10px 20px;
+        font-size: 18px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        max-height: 500px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .detail-link {
+        margin: 10px;
+        font-weight: bold;
+      }
+
+      .img-board-item-img {
+        display: flex;
+        margin: 10px;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <div><h1 class="logo">いつものやつで</h1></div>
+      <div><h1 class="logo">itsumono</h1></div>
     </header>
 
     <main>
       <section class="calender">
-        <div class="year">2024</div>
-        <table class="month">
-          <td>12</td>
-          <td>11</td>
-          <td>10</td>
-        </table>
-        <div>>>前に戻る</div>
+        <div class="year"><p>2024</p></div>
+        <div class="month">
+          <div class="month-number">12</div>
+          <div class="month-number">11</div>
+          <div class="month-number">10</div>
+        </div>
       </section>
 
       <section class="img-board">
-        <table>
-          <td class="detail-link">
+        <div class="img-board-item">
+          <div class="detail-link">
             <div class="ymd">2024/12/10</div>
-            <div class="img"><img src="img/talk.png" alt="" /></div>
-            <div class="star">⭐️⭐️⭐️⭐️⭐️</div>
-            <div class="tag">#ロング #前髪</div>
-            <div class="commet">comment：ロングにしてみた。前髪が微妙かも</div>
-          </td>
-          <td class="detail-link">
+            <div class="img-board-item-img">
+              <div class="img"><img src="img/talk.png" alt="" /></div>
+              <div class="img"><img src="img/talk.png" alt="" /></div>
+            </div>
+          </div>
+          <div class="detail-link">
             <div class="ymd">2024/12/10</div>
-            <div class="img"><img src="img/talk.png" alt="" /></div>
-          </td>
-          <td class="detail-link">
+            <div class="img-board-item-img">
+              <div class="img"><img src="img/talk.png" alt="" /></div>
+              <div class="img"><img src="img/talk.png" alt="" /></div>
+              <div class="img"><img src="img/talk.png" alt="" /></div>
+              <div class="img"><img src="img/talk.png" alt="" /></div>
+            </div>
+          </div>
+          <div class="detail-link">
             <div class="ymd">2024/12/10</div>
-            <div class="img"><img src="img/talk.png" alt="" /></div>
-          </td>
-          <td class="detail-link">
+            <div class="img-board-item-img">
+              <div class="img"><img src="img/talk.png" alt="" /></div>
+              <div class="img"><img src="img/talk.png" alt="" /></div>
+            </div>
+          </div>
+          <div class="detail-link">
             <div class="ymd">2024/12/10</div>
-            <div class="img"><img src="img/talk.png" alt="" /></div>
-          </td>
-        </table>
+            <div class="img-board-item-img">
+              <div class="img"><img src="img/talk.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="control-nav">
@@ -84,7 +145,7 @@
 
         $("#logout-button").click(function () {
           // ログアウト処理をここに追加
-          alert("ログアウトしました");
+          alert("��グアウトしました");
 
           redirect("index.html");
         });
