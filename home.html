@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/destyle.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div><h1 class="logo">いつものやつで</h1></div>
+    </header>
+
+    <main>
+      <section class="calender">
+        <div class="year">2024</div>
+        <table class="month">
+          <td>12</td>
+          <td>11</td>
+          <td>10</td>
+        </table>
+        <div>>>前に戻る</div>
+      </section>
+
+      <section class="img-board">
+        <table>
+          <td class="detail-link">
+            <div class="ymd">2024/12/10</div>
+            <div class="img"><img src="img/talk.png" alt="" /></div>
+            <div class="star">⭐️⭐️⭐️⭐️⭐️</div>
+            <div class="tag">#ロング #前髪</div>
+            <div class="commet">comment：ロングにしてみた。前髪が微妙かも</div>
+          </td>
+          <td class="detail-link">
+            <div class="ymd">2024/12/10</div>
+            <div class="img"><img src="img/talk.png" alt="" /></div>
+          </td>
+          <td class="detail-link">
+            <div class="ymd">2024/12/10</div>
+            <div class="img"><img src="img/talk.png" alt="" /></div>
+          </td>
+          <td class="detail-link">
+            <div class="ymd">2024/12/10</div>
+            <div class="img"><img src="img/talk.png" alt="" /></div>
+          </td>
+        </table>
+      </section>
+
+      <section class="control-nav">
+        <button id="home-button">Home</button>
+        <button id="add-button">Add</button>
+        <button id="setting-button">Setting</button>
+        <button id="logout-button">Logout</button>
+      </section>
+    </main>
+    <script>
+      $(document).ready(function () {
+        $(".detail-link").click(function () {
+          window.location.href = "detail.html";
+        });
+
+        $("#home-button").click(function () {
+          window.location.href = "home.html";
+        });
+
+        $("#add-button").click(function () {
+          window.location.href = "add.html";
+        });
+
+        $("#setting-button").click(function () {
+          window.location.href = "setting.html";
+        });
+
+        $("#logout-button").click(function () {
+          // ログアウト処理をここに追加
+          alert("ログアウトしました");
+
+          redirect("index.html");
+        });
+      });
+    </script>
+  </body>
+</html>

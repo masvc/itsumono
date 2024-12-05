@@ -22,6 +22,9 @@
 - 〇〇〇〇〇〇〇〇
 - 〇〇〇〇〇〇〇〇
 
+DB 作成において、スプレッドシートで整理した。
+https://docs.google.com/spreadsheets/d/1bLKDo5W-z-HETPwMNLKm8k_q92GeYIrKzwE8ZLqB_Bs/edit?usp=sharing
+
 ## ⑥ 難しかった点・次回トライしたいこと（又は機能）
 
 - 〇〇〇〇〇〇〇〇
@@ -40,3 +43,6 @@ https://saruwakakun.com/design/gallery/palette
 
 雪のアニメーション：
 https://animate-club.com/background/snow/
+
+写真の EXIF データから日時を読み取る方法：
+https://syncer.jp/php-exif-read-data

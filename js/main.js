@@ -1,5 +1,5 @@
 (function () {
-  var COUNT = 100;
+  var COUNT = 300;
   var masthead = document.querySelector(".wrapper");
   var canvas = document.createElement("canvas");
   var ctx = canvas.getContext("2d");
@@ -42,6 +42,7 @@
 
   canvas.style.position = "absolute";
   canvas.style.left = canvas.style.top = "0";
+  canvas.style.pointerEvents = "none";
 
   var snowflakes = [],
     snowflake;

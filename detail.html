@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/destyle.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div><h1 class="logo">いつものやつで</h1></div>
+    </header>
+
+    <main>
+      <section class="img-board">
+        <table>
+          <td href="detail.html">
+            <div class="YMD">2024/12/10</div>
+            <div class="img">
+              <img src="img/talk.png" alt="" />
+              <img src="img/talk.png" alt="" />
+              <img src="img/talk.png" alt="" />
+            </div>
+            <div class="star">⭐️⭐️⭐️⭐️⭐️</div>
+            <div class="tag">#ロング #前髪</div>
+            <div class="commet">comment：ロングにしてみた。前髪が微妙かも</div>
+          </td>
+        </table>
+      </section>
+
+      <section class="control-nav">
+        <button href="home.html">Home</button>
+        <button>Add</button>
+        <button href="setting.html">Setting</button>
+        <button>Logout</button>
+      </section>
+    </main>
+
+    <script>
+      document
+        .querySelector('button[href="home.html"]')
+        .addEventListener("click", function () {
+          window.location.href = "home.html";
+        });
+
+      document
+        .querySelector('button[href="setting.html"]')
+        .addEventListener("click", function () {
+          window.location.href = "setting.html";
+        });
+    </script>
+  </body>
+</html>

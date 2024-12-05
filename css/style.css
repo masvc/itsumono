@@ -6,16 +6,20 @@
   --gray-color: #707070; /* グレー：ユーザー情報などに使用 */
 }
 
+* {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
 header {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: center;
+  padding: 10px;
   background-color: var(--primary-color);
   color: white;
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .login {
@@ -161,5 +165,65 @@ button.start-button {
 
 .start-button:hover {
   opacity: 0.8;
+  cursor: pointer;
+}
+
+.start-buttons {
+  margin-top: 30px;
+}
+
+.start-buttons a {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 0 10px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.start-buttons a:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* スマートフォン向けのスタイル */
+@media screen and (max-width: 768px) {
+  .loginpage {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .left-content,
+  .right-content {
+    flex: none;
+    width: 100%;
+  }
+
+  .left-content {
+    justify-content: center;
+  }
+
+  .left-content img {
+    max-width: 280px;
+  }
+
+  .app-title {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .app-description {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .start-buttons {
+    text-align: center;
+  }
+}
+
+.detail-link {
   cursor: pointer;
 }

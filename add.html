@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h2>写真の追加はこちらから</h2>
+      <form action="/submit" method="POST" enctype="multipart/form-data">
+        <p>ヘアスタイル：</p>
+        <p>前髪の画像：</p>
+        <input type="file" name="front_image" />
+        <p>側面の画像：</p>
+        <input type="file" name="side_image" />
+        <p>後ろの画像：</p>
+        <input type="file" name="back_image" />
+        <p>その他の画像：</p>
+        <input type="file" name="other_image" />
+        <p>星の数：</p>
+        <select name="star">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <p>コメント：</p>
+        <textarea name="comment" cols="30" rows="10"></textarea>
+        <p>タグ：</p>
+        <select name="tag" multiple>
+          <!-- タグのオプションをここに追加 -->
+          <!-- ここphpでdbから選択肢持ってくる -->
+        </select>
+        <button type="submit">追加</button>
+      </form>
+    </main>
+  </body>
+</html>
