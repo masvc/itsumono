@@ -19,7 +19,7 @@ header {
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 25px;
   color: var(--background-color);
   font-weight: bold;
   font-family: "Verdana", sans-serif;
@@ -78,7 +78,7 @@ img {
   padding: 10px;
 }
 
-.loginpage {
+.indexpage {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -194,7 +194,7 @@ button.start-button {
 
 /* スマートフォン向けのスタイル */
 @media screen and (max-width: 768px) {
-  .loginpage {
+  .indexpage {
     flex-direction: column;
     padding: 20px;
     gap: 30px;

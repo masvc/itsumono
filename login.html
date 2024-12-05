@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/destyle.css" />
+    <script src="js/main.js" defer></script>
     <title>Login | itsumono</title>
   </head>
   <style>
-    /* ... 既存のスタイル ... */
-
     .loginpage {
       background-color: #ffffff;
-      padding: 10px 20px;
+      padding: 50px 20px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
+      margin: 200px 20px;
     }
 
     .page-title {
       font-size: 24px;
+      font-weight: bold;
       margin-bottom: 50px;
     }
 
@@ -46,24 +47,28 @@
     button[type="submit"]:hover {
       background-color: #45a049;
     }
+
+    .back-button {
+      font-size: 14px;
+      color: var(--text-color);
+      margin: 10px;
+      border-bottom: 1px solid var(--text-color);
+    }
   </style>
-  <body>
+  <body class="login">
     <main class="loginpage">
-      <div>
-        <div>
-          <div class="page-title"><h2>ログインはこちらで</h2></div>
-        </div>
-        <div>
-          <form action="">
-            <input type="email" placeholder="メールアドレス" />
-            <input type="password" placeholder="パスワード" />
-            <button type="submit">ログイン</button>
-            <button type="button" onclick="location.href='./index.html'">
-              <p>戻る</p>
-            </button>
-          </form>
-        </div>
+      <div class="page-title">
+        <h2>ログインはこちらで</h2>
       </div>
+
+      <form action="">
+        <input type="email" placeholder="メールアドレス" />
+        <input type="password" placeholder="パスワード" />
+        <button type="submit">ログイン</button>
+        <button type="button" onclick="location.href='./index.html'">
+          <p class="back-button">戻る</p>
+        </button>
+      </form>
     </main>
   </body>
 </html>
