@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/destyle.css" />
+    <script src="js/main.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -15,7 +16,7 @@
     <main>
       <section class="img-board">
         <table>
-          <td href="detail.html">
+          <div>
             <div class="YMD">2024/12/10</div>
             <div class="img">
               <img src="img/talk.png" alt="" />
@@ -25,30 +26,24 @@
             <div class="star">⭐️⭐️⭐️⭐️⭐️</div>
             <div class="tag">#ロング #前髪</div>
             <div class="commet">comment：ロングにしてみた。前髪が微妙かも</div>
-          </td>
+          </div>
         </table>
       </section>
 
       <section class="control-nav">
-        <button href="home.html">Home</button>
-        <button>Add</button>
-        <button href="setting.html">Setting</button>
-        <button>Logout</button>
+        <button id="home-button" class="control-nav-button">
+          <img class="control-nav-img" src="img/home.png" alt="ホーム" />
+        </button>
+        <button id="add-button" class="control-nav-button">
+          <img class="control-nav-img" src="img/add.png" alt="追加" />
+        </button>
+        <button id="setting-button" class="control-nav-button">
+          <img class="control-nav-img" src="img/setting.png" alt="設定" />
+        </button>
+        <button id="logout-button" class="control-nav-button">
+          <img class="control-nav-img" src="img/logout.png" alt="ログアウト" />
+        </button>
       </section>
     </main>
-
-    <script>
-      document
-        .querySelector('button[href="home.html"]')
-        .addEventListener("click", function () {
-          window.location.href = "home.html";
-        });
-
-      document
-        .querySelector('button[href="setting.html"]')
-        .addEventListener("click", function () {
-          window.location.href = "setting.html";
-        });
-    </script>
   </body>
 </html>

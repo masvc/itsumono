@@ -1,36 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> </title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/destyle.css" />
+    <script src="js/main.js" defer></script>
+    <title>新規登録ページ</title>
+
+    <style>
+      .registerpage {
+        background-color: #ffffff;
+        padding: 100px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .page-title {
+        font-size: 24px;
+        margin-bottom: 50px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 15px;
+        margin: 10px auto;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        text-align: start;
+      }
+
+      button[type="submit"] {
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 15px;
+        margin: 10px auto;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .discription {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .discription h3 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .discription h4 {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .features {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+      }
+
+      .features ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .features li {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .features li:before {
+        content: "•";
+        color: #ff6f61;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      /* ラジオボタンのカスタムスタイル */
+      input[type="radio"] {
+        display: none; /* デフォルトのラジオボタンを非表示に */
+      }
+
+      input[type="radio"] + label {
+        display: inline-block;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      input[type="radio"]:checked + label {
+        background-color: var(--secondary-color);
+        color: white;
+        border-color: var(--secondary-color);
+      }
+
+      .question-txt {
+        font-size: 14px;
+        color: var(--text-color);
+        margin: 10px 0;
+        text-align: start;
+      }
+
+      .question {
+        margin: 15px;
+        text-align: start;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div><h1 class="logo">いつものやつで</h1></div>
-    </header>
-
-    <main>
+    <main class="registerpage">
       <div class="page-title">
         <h2>新規登録はこちらで</h2>
       </div>
 
       <section class="discription">
-        <h3>いつものやつでとは</h3>
-        <h4>
-          「今日はどんな感じにしましょうか？」<br />
-          その質問、もう迷わなくていい。<br />
-          写真で残す、いつもの髪型。<br />
-          見せるだけで伝わる、あの時の理想形。<br />
-          お気に入りの美容師さんと、スムーズなコミュニケーション。<br />
-          面倒な説明から、今、解放されよう。
-        </h4>
-
         <div class="features">
           <h3>主な機能</h3>
           <ul>
-            <li>✨ 髪型の写真をカンタン保存（前後左右から撮影）</li>
-            <li>📅 いつ、どこで、誰に切ってもらったかを記録</li>
+            <li>
+              ✨ 髪型の写真をカンタン保存（前後左右からの撮影など複数保存可）
+            </li>
+            <li>📅 いつ、どんなカットをしてもらったかを記録</li>
             <li>⭐️ お気に入りの髪型をマーク＆検索</li>
             <li>💬 美容師さんとスムーズなコミュニケーション</li>
             <li>📝 スタイリングのメモや評価も残せる</li>
@@ -38,23 +151,42 @@
         </div>
 
         <form action="">
-          <input type="text" placeholder="ニックネーム" name="uname" />
+          <input type="text" placeholder="ユーザーネーム" name="uname" />
           <input type="email" placeholder="メールアドレス" name="email" />
-          <input
-            type="password"
-            placeholder="パスワード"
-            name="password"
-          /><br />
-          性別： 男性<input type="radio" name="gender" value="male" />
-          女性<input type="radio" name="gender" value="female" />
-          <p>※施術中についてのアンケートにご協力ください。</p>
-          美容師と話すほうが好きですか？
-          <input type="radio" name="question1" value="" />
-          雑誌やスマホを見ながら受けたいですか？
-          <input type="radio" name="question2" placeholder="" />
-          ゆっくりと過ごすのが好きですか？
-          <input type="radio" name="question3" placeholder="" />
-          <button type="submit">新規登録</button>
+          <input type="password" placeholder="パスワード" name="password" />
+
+          <div>
+            <p class="question-txt">
+              ※施術についてのアンケートにご協力ください。
+            </p>
+          </div>
+          <div class="question">
+            <p class="question-txt">① 美容師と話すことが好きですか？</p>
+            <input type="radio" id="yes1" name="question1" value="yes" />
+            <label for="yes1">はい</label>
+            <input type="radio" id="no1" name="question1" value="no" />
+            <label for="no1">いいえ</label>
+          </div>
+          <div class="question">
+            <p class="question-txt">② 雑誌やスマホを見ながら受けたいですか？</p>
+            <input type="radio" id="yes2" name="question2" value="yes" />
+            <label for="yes2">はい</label>
+            <input type="radio" id="no2" name="question2" value="no" />
+            <label for="no2">いいえ</label>
+          </div>
+          <div class="question">
+            <p class="question-txt">③ 美容院ではゆっくりと過ごしたいですか？</p>
+            <input type="radio" id="yes3" name="question3" value="yes" />
+            <label for="yes3">はい</label>
+            <input type="radio" id="no3" name="question3" value="no" />
+            <label for="no3">いいえ</label>
+          </div>
+          <div class="button-container">
+            <button type="submit">新規登録</button>
+            <button type="button" onclick="location.href='./index.html'">
+              <p>戻る</p>
+            </button>
+          </div>
         </form>
       </section>
     </main>

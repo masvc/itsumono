@@ -3,21 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> </title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/destyle.css" />
+    <title>ログインページ</title>
   </head>
-  <body>
-    <main>
-      <div class="page-title">
-        <h2>ログインはこちらで</h2>
-      </div>
+  <style>
+    /* ... 既存のスタイル ... */
 
-      <section class="discription">
-        <form action="">
-          <input type="email" placeholder="メールアドレス" />
-          <input type="password" placeholder="パスワード" />
-          <button type="submit">ログイン</button>
-        </form>
-      </section>
+    .loginpage {
+      background-color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .page-title {
+      font-size: 24px;
+      margin-bottom: 50px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      margin: 10px auto;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: start;
+    }
+
+    button[type="submit"] {
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 15px;
+      margin: 10px auto;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <body>
+    <main class="loginpage">
+      <div>
+        <div>
+          <div class="page-title"><h2>ログインはこちらで</h2></div>
+        </div>
+        <div>
+          <form action="">
+            <input type="email" placeholder="メールアドレス" />
+            <input type="password" placeholder="パスワード" />
+            <button type="submit">ログイン</button>
+            <button type="button" onclick="location.href='./index.html'">
+              <p>戻る</p>
+            </button>
+          </form>
+        </div>
+      </div>
     </main>
   </body>
 </html>
