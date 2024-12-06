@@ -22,7 +22,12 @@
 - 〇〇〇〇〇〇〇〇
 - 〇〇〇〇〇〇〇〇
 
-DB 作成において、スプレッドシートで整理した。
+画像をあげるときに
+
+- 例: `/uploads/users/{user_id}/`
+  となるようにした
+
+DB 作成において、スプレッドシートで整理した上でまとめた。
 https://docs.google.com/spreadsheets/d/1bLKDo5W-z-HETPwMNLKm8k_q92GeYIrKzwE8ZLqB_Bs/edit?usp=sharing
 
 ## ⑥ 難しかった点・次回トライしたいこと（又は機能）
