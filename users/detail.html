@@ -7,25 +7,64 @@
     <link rel="stylesheet" href="../css/destyle.css" />
     <script src="../js/main.js" defer></script>
     <title>Detail | itsumono</title>
+    <style>
+      .ymd {
+        padding: 30px 20px 10px 20px;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .img-board {
+        margin: 10px 20px;
+        font-size: 18px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        max-height: 500px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .img-board-item-img {
+        margin: 10px;
+      }
+
+      .star {
+        margin-bottom: 10px;
+      }
+
+      .tag {
+        margin-bottom: 10px;
+      }
+
+      .comment {
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <div><h1 class="logo">itsumono</h1></div>
+      <div>
+        <a href="home.html"><h1 class="logo">itsumono</h1></a>
+      </div>
     </header>
 
     <main>
       <section class="img-board">
         <table>
           <div>
-            <div class="YMD">2024/12/10</div>
+            <div class="ymd">2024/12/10</div>
             <div class="img">
-              <img src="../img/talk.png" alt="" />
-              <img src="../img/talk.png" alt="" />
-              <img src="../img/talk.png" alt="" />
+              <img class="img-board-item-img" src="../img/talk.png" alt="" />
+              <img class="img-board-item-img" src="../img/talk.png" alt="" />
+              <img class="img-board-item-img" src="../img/talk.png" alt="" />
             </div>
             <div class="star">⭐️⭐️⭐️⭐️⭐️</div>
             <div class="tag">#ロング #前髪</div>
-            <div class="commet">comment：ロングにしてみた。前髪が微妙かも</div>
+            <div class="comment">comment：ロングにしてみた。前髪が微妙かも</div>
           </div>
         </table>
       </section>
