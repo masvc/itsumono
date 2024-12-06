@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/destyle.css" />
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/destyle.css" />
+    <script src="../js/main.js" defer></script>
     <title>Login | itsumono</title>
   </head>
   <style>
@@ -61,11 +61,11 @@
         <h2>ログインはこちらで</h2>
       </div>
 
-      <form action="">
-        <input type="email" placeholder="メールアドレス" />
-        <input type="password" placeholder="パスワード" />
+      <form action="home.html">
+        <input type="email" placeholder="メールアドレス" required />
+        <input type="password" placeholder="パスワード" required />
         <button type="submit">ログイン</button>
-        <button type="button" onclick="location.href='./index.html'">
+        <button type="button" onclick="location.href='../index.html'">
           <p class="back-button">戻る</p>
         </button>
       </form>
