@@ -52,10 +52,14 @@ ymd: 投稿日時 datetime
 - MONTH(ymd) as month # 月を取得
 - DAY(ymd) as day # 日を取得
 
-## タグの管理 DB：
+[img_detail-sample.csv](./itsumono/data/img_detail-sample.csv)
+
+## タグの管理 DB 名　 tags：
 
 tag_id: タグ ID int 12 A.I
 tagname: タグ名 varchar 256
+
+[tag-sample.csv](./itsumono/data/tag-sample.csv)
 
 ## DB 名：reservation（どのスタッフがどのユーザーに対してどの日時に予約をしたかの情報管理）
 
@@ -64,3 +68,5 @@ uid: ユーザー ID int 12
 sid: スタッフ ID int 12
 reserve_date: 予約日時 datetime
 staff_memo: スタッフメモ varchar 256
+
+[reservation-sample.csv](./itsumono/data/reservation-sample.csv)
