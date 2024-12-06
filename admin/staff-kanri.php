@@ -39,6 +39,11 @@ $values = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
+  <script>
+    function confirmDelete() {
+      return confirm('本当に削除してもよろしいですか？');
+    }
+  </script>
   <section class="header">
     <h1>スタッフ情報管理/一覧</h1>
   </section>
@@ -53,7 +58,7 @@ $values = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <p>入社日:<?= h($v['indate']); ?></p>
           <div>
             <a href="staff-update.php?id=<?= h($v['id']); ?>">更新</a>
-            <a href="staff-delete.php?id=<?= h($v['id']); ?>">削除</a>
+            <a href="staff-delete.php?id=<?= h($v['id']); ?>" onclick="return confirmDelete();">削除</a>
           </div>
         </div>
       <?php } ?>
