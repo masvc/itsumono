@@ -34,7 +34,11 @@ function h($str)
 function sschk()
 {
     if (!isset($_SESSION["chk_ssid"]) || $_SESSION["chk_ssid"] != session_id()) {
-        exit("Login Error");
+        // エラーログを記録
+        error_log("Login Error: セッションIDが一致しません。", 0);
+
+        // ユーザーフレンドリーなエラーメッセージ
+        exit("ログインエラーが発生しました。再度ログインしてください。" . "<a href='staff-login.php'>ログイン画面に戻る</a>");
     } else {
         session_regenerate_id(true);
         $_SESSION["chk_ssid"] = session_id();

@@ -1,3 +1,9 @@
+<?php
+session_start();
+include('../funcs.php');
+sschk();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,6 +49,7 @@
             type="text"
             id="sid"
             name="sid"
+            required
             placeholder="ローマ字、苗字のみ、ex. yoshida" />
         </div>
         <div>
@@ -51,6 +58,7 @@
             type="password"
             id="spw"
             name="spw"
+            required
             placeholder="初期はtestで、本人が変更するのを推奨。" />
         </div>
         <div class="role-flg">
@@ -58,19 +66,24 @@
           <br />
           <label class="role-flg-label" for="role">
             <p class="role-flg-text">責任者</p>
-            <input type="radio" id="role" name="role_flg" value="admin" />
+            <input type="radio" id="role" name="role_flg" value="admin" required />
           </label>
           <br />
           <label class="role-flg-label" for="role">
             <p class="role-flg-text">スタッフ</p>
-            <input type="radio" id="role" name="role_flg" value="staff" />
+            <input type="radio" id="role" name="role_flg" value="staff" required checked />
           </label>
         </div>
         <div class="login-btn">
           <button type="submit">新規登録</button>
+          <button type="button" onclick="location.href='staff-kanri.php'">戻る</button>
         </div>
       </div>
     </form>
+  </section>
+  <section class="footer">
+    <button onclick="location.href='staff-top.php'">トップ画面に戻る</button>
+    <button onclick="location.href='staff-logout.php'">ログアウト</button>
   </section>
   <footer>&copy; 2024 itsumono All rights reserved.</footer>
 </body>

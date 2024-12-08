@@ -1,5 +1,8 @@
 <?php
+
+session_start();
 include('../funcs.php');
+sschk();
 
 $pdo = db_connect();
 
@@ -60,10 +63,10 @@ $values = $stmt->fetchAll(PDO::FETCH_ASSOC);
           </p>
           <p>権限:
             <?php
-            if ($v['role_flg'] == 0) {
-              echo '一般スタッフ';
-            } else if ($v['role_flg'] == 1) {
+            if ($v['role_flg'] == 1) {
               echo '責任者';
+            } else {
+              echo 'スタッフ';
             }; ?></p>
           <p>ステータス：
             <?php
@@ -75,9 +78,16 @@ $values = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <p>登録日:
             <?= h($v['indate']); ?>
           </p>
+          <!-- 責任者のみ更新と削除を使えるようにする -->
           <div>
-            <a href="staff-update.php?id=<?= h($v['id']); ?>">更新</a>
-            <a href="staff-delete.php?id=<?= h($v['id']); ?>" onclick="return confirmDelete();">削除</a>
+            <?php
+            if ($_SESSION['role_flg'] == 1) {
+            ?>
+              <a href="staff-update.php?id=<?= h($v['id']); ?>">更新</a>
+              <a href="staff-delete.php?id=<?= h($v['id']); ?>" onclick="return confirmDelete();">削除</a>
+            <?php
+            }
+            ?>
           </div>
         </div>
       <?php } ?>
@@ -89,7 +99,7 @@ $values = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </button>
   </section>
   <section class="footer">
-    <button onclick="location.href='staff-top.html'">トップ画面に戻る</button>
+    <button onclick="location.href='staff-top.php'">トップ画面に戻る</button>
     <button onclick="location.href='staff-logout.php'">ログアウト</button>
   </section>
   <footer>&copy; 2024 itsumono All rights reserved.</footer>

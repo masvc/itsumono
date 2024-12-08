@@ -1,7 +1,11 @@
 <?php
-$id = $_GET['id'];
-
+session_start();
 include('../funcs.php');
+sschk();
+
+$id = $_GET['id'];
+$role_flg = $_GET['role_flg'];
+
 $pdo = db_connect();
 
 $sql = 'SELECT * FROM staff WHERE id = :id';
@@ -78,12 +82,12 @@ $value = $stmt->fetch();
           <br />
           <label class="role-flg-label" for="role">
             <p class="role-flg-text">責任者</p>
-            <input type="radio" id="role" name="role_flg" value="admin" />
+            <input type="radio" id="role" name="role_flg" value="1" <?= $value['role_flg'] == '1' ? 'checked' : ''; ?> />
           </label>
           <br />
           <label class="role-flg-label" for="role">
             <p class="role-flg-text">スタッフ</p>
-            <input type="radio" id="role" name="role_flg" value="staff" />
+            <input type="radio" id="role" name="role_flg" value="0" <?= $value['role_flg'] == '0' ? 'checked' : ''; ?> />
           </label>
         </div>
         <div>
@@ -91,9 +95,14 @@ $value = $stmt->fetch();
         </div>
         <div class="login-btn">
           <button type="submit">更新</button>
+          <button type="button" onclick="location.href='staff-kanri.php'">戻る</button>
         </div>
       </div>
     </form>
+  </section>
+  <section class="footer">
+    <button onclick="location.href='staff-top.php'">トップ画面に戻る</button>
+    <button onclick="location.href='staff-logout.php'">ログアウト</button>
   </section>
   <footer>&copy; 2024 itsumono All rights reserved.</footer>
 </body>
