@@ -19,7 +19,7 @@
     <h4>BIYOUSHITSU 原宿店 責任者：吉田（090-1234-5678）</h4>
   </section>
   <section class="main">
-    <form method="post" action="staff-login-action.php" class="login-form">
+    <form method="post" action="staff-login-action.php" class="login-form" name="loginForm">
       <div>
         <div>
           <label for="sid">スタッフID：</label>
