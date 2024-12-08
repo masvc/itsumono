@@ -28,7 +28,6 @@
       echo '<p class="error-message">' . $_SESSION["error_msg"] . '</p>';
       unset($_SESSION["error_msg"]);
     }
-
     ?>
     <h3>
       ※新規スタッフ、パスワードがわからなくなった人は各店舗責任者に連絡してください。
