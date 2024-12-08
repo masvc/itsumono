@@ -1,33 +1,42 @@
+<?php
+session_start();
+include('../funcs.php');
+sschk();
+?>
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/admin.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <section class="header">
-      <h1>お客様情報管理/一覧</h1>
-      <label for="staff-id"> </label>
-    </section>
-    <section class="main">
-      <h2>担当のお客様情報</h2>
-      <div>
-        <select name="" id="">
-          <option value="yoshida">1234567890 : 吉田様</option>
-        </select>
-        <ul>
-          <li>2024/12/01</li>
-          <li>パーマ</li>
-          <li>コメント：髪質が繊細で、パーマはしたくない</li>
-        </ul>
-      </div>
-    </section>
-    <section class="footer">
-      <button onclick="location.href='staff-top.html'">トップ画面に戻る</button>
-      <button onclick="location.href='staff-logout.php'">ログアウト</button>
-    </section>
-    <footer>&copy; 2024 itsumono All rights reserved.</footer>
-  </body>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/admin.css" />
+  <title>お客様情報管理/一覧</title>
+</head>
+
+<body>
+  <section class="header">
+    <h1>お客様情報管理/一覧</h1>
+    <label for="staff-id"> </label>
+  </section>
+  <section class="main">
+    <h2>担当のお客様情報</h2>
+    <div>
+      <select class="customer-select" name="" id="">
+        <option value="yoshida">1234567890 : 吉田様</option>
+      </select>
+      <ul>
+        <li>2024/12/01</li>
+        <li>パーマ</li>
+        <li>コメント：髪質が繊細で、パーマはしたくない</li>
+      </ul>
+    </div>
+  </section>
+  <section class="footer">
+    <button onclick="location.href='staff-top.php'">トップ画面に戻る</button>
+    <button onclick="location.href='staff-logout.php'">ログアウト</button>
+  </section>
+  <footer>&copy; 2024 itsumono All rights reserved.</footer>
+</body>
+
 </html>

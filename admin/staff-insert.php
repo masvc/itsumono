@@ -1,10 +1,10 @@
 <?php
 include('../funcs.php');
-
 // POSTデータを取得
 $sid = $_POST['sid'];
 $spw = $_POST["spw"];
 $role_flg = $_POST["role_flg"];
+$spw_hash = password_hash($spw, PASSWORD_DEFAULT); // ハッシュ化
 
 // DB接続 XammpなのでrootでOK
 $pdo = db_connect();
