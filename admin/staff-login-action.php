@@ -5,7 +5,7 @@ $sid = $_POST['sid'];
 $spw = $_POST['spw'];
 
 include('../funcs.php');
-$pdo = db_conn();
+$pdo = db_connect();
 
 $stmt = $pdo->prepare('SELECT * FROM staff WHERE sid = :sid AND life_flg = 0'); // life_flg = 0 は退職したスタッフ
 $stmt->bindValue(':sid', $sid, PDO::PARAM_INT);

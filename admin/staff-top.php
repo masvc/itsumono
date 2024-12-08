@@ -6,7 +6,7 @@ include('../funcs.php');
 
 sschk();
 
-$pdo = db_conn();
+$pdo = db_connect();
 
 
 
