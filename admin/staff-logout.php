@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('../funcs.php');
 
 $_SESSION = array();
 
