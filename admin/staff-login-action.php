@@ -23,6 +23,7 @@ if ($pw && $val) {
     $_SESSION["chk_ssid"] = session_id();
     $_SESSION["role_flg"] = $val['role_flg'];
     $_SESSION["sid"] = $val['sid'];
+    $_SESSION["id"] = $val['id'];
     redirect('staff-top.php');
 } else {
     $_SESSION["error_msg"] = "※IDまたはパスワードが間違えています。ログインしなおしてください。";

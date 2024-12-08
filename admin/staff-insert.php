@@ -15,7 +15,7 @@ $stmt = $pdo->prepare($sql);
 
 // バインド変数を設定
 $stmt->bindValue(':sid', $sid, PDO::PARAM_STR);
-$stmt->bindValue(':spw', $spw, PDO::PARAM_STR);
+$stmt->bindValue(':spw', $spw_hash, PDO::PARAM_STR);
 $stmt->bindValue(':role_flg', $role_flg, PDO::PARAM_INT);
 
 // 実行

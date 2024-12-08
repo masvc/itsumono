@@ -1,0 +1,11 @@
+INSERT INTO img_details (id, uid, front_image, side_image, back_image, other_image, star, comment, tagid, ymd) VALUES
+(11, 7, 'front.jpeg', 'side.jpeg', 'back.jpeg', NULL, 3, '普通のスタイル', 1, '2023-10-01'),
+(12, 2, 'front.jpeg', 'side.jpeg', 'back.jpeg', NULL, 4, '良い感じです', 2, '2023-10-02'),
+(13, 3, 'front.jpeg', 'side.jpeg', 'back.jpeg', NULL, 5, '最高です！', 3, '2023-10-03'),
+(14, 5, 'front.jpeg', 'side.jpeg', 'back.jpeg', NULL, 2, 'まあまあです', 4, '2023-10-04'),
+(15, 6, 'front.jpeg', 'side.jpeg', 'back.jpeg', NULL, 1, '悪くないです', 5, '2023-10-05'),
+(16, 8, 'front.jpeg', 'side.jpeg', 'back.jpeg', NULL, 3, '素晴らしい！', 6, '2023-10-06'),
+(17, 9, 'front.jpeg', 'side.jpeg', 'back.jpeg', NULL, 4, 'とても良いです', 7, '2023-10-07'),
+(18, 10, 'front.jpeg', 'side.jpeg', 'back.jpeg', NULL, 5, '完璧です！', 8, '2023-10-08'),
+(19, 1, 'front.jpeg', 'side.jpeg', 'back.jpeg', NULL, 2, 'まあまあです', 9, '2023-10-09'),
+(20, 4, 'front.jpeg', 'side.jpeg', 'back.jpeg', NULL, 1, '悪くないです', 10, '2023-10-10');
