@@ -26,6 +26,20 @@ $value = $stmt->fetch();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/admin.css" />
   <title>Document</title>
+  <style>
+    .role-flg-label {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+    }
+
+    .role-flg-text {
+      width: 100px;
+      padding: 5px;
+    }
+  </style>
 </head>
 
 <body>
@@ -59,12 +73,18 @@ $value = $stmt->fetch();
             placeholder="初期はtestで、本人が変更するのを推奨。"
             value="<?= h($value['spw']); ?>" />
         </div>
-        <div>
-          <label for="role">管理者権限：</label>
-          <input type="radio" id="role" name="role_flg" value="1" <?php if ($value['role_flg'] == 1) echo 'checked'; ?> />
-          <label for="role">管理者</label>
-          <input type="radio" id="role" name="role_flg" value="0" <?php if ($value['role_flg'] == 0) echo 'checked'; ?> />
-          <label for="role">スタッフ</label>
+        <div class="role-flg">
+          <label for="role">権限：</label>
+          <br />
+          <label class="role-flg-label" for="role">
+            <p class="role-flg-text">責任者</p>
+            <input type="radio" id="role" name="role_flg" value="admin" />
+          </label>
+          <br />
+          <label class="role-flg-label" for="role">
+            <p class="role-flg-text">スタッフ</p>
+            <input type="radio" id="role" name="role_flg" value="staff" />
+          </label>
         </div>
         <div>
           <input type="hidden" name="id" value="<?= h($value['id']); ?>">

@@ -6,6 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/admin.css" />
   <title>Document</title>
+
+  <style>
+    .role-flg-label {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+    }
+
+    .role-flg-text {
+      width: 100px;
+      padding: 5px;
+    }
+  </style>
 </head>
 
 <body>
@@ -38,12 +53,18 @@
             name="spw"
             placeholder="初期はtestで、本人が変更するのを推奨。" />
         </div>
-        <div>
-          <label for="role">管理者権限：</label>
-          <input type="radio" id="role" name="role_flg" value="admin" />
-          <label for="role">管理者</label>
-          <input type="radio" id="role" name="role_flg" value="staff" />
-          <label for="role">スタッフ</label>
+        <div class="role-flg">
+          <label for="role">権限：</label>
+          <br />
+          <label class="role-flg-label" for="role">
+            <p class="role-flg-text">責任者</p>
+            <input type="radio" id="role" name="role_flg" value="admin" />
+          </label>
+          <br />
+          <label class="role-flg-label" for="role">
+            <p class="role-flg-text">スタッフ</p>
+            <input type="radio" id="role" name="role_flg" value="staff" />
+          </label>
         </div>
         <div class="login-btn">
           <button type="submit">新規登録</button>

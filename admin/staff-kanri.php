@@ -52,10 +52,29 @@ $values = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="staff-info">
       <?php foreach ($values as $v) { ?>
         <div class="staff-info-item">
-          <h2>ID:<?= h($v['id']); ?></h2>
-          <p>スタッフID:<?= h($v['sid']); ?></p>
-          <p>パスワード:<?= h($v['spw']); ?></p>
-          <p>入社日:<?= h($v['indate']); ?></p>
+          <h2>ID:
+            <?= h($v['id']); ?>
+          </h2>
+          <p>スタッフID:
+            <?= h($v['sid']); ?>
+          </p>
+          <p>権限:
+            <?php
+            if ($v['role_flg'] == 0) {
+              echo '一般スタッフ';
+            } else if ($v['role_flg'] == 1) {
+              echo '責任者';
+            }; ?></p>
+          <p>ステータス：
+            <?php
+            if ($v['life_flg'] == 1) {
+              echo '在籍中';
+            } else if ($v['life_flg'] == 0) {
+              echo '退職';
+            }; ?></p>
+          <p>登録日:
+            <?= h($v['indate']); ?>
+          </p>
           <div>
             <a href="staff-update.php?id=<?= h($v['id']); ?>">更新</a>
             <a href="staff-delete.php?id=<?= h($v['id']); ?>" onclick="return confirmDelete();">削除</a>
