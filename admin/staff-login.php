@@ -1,3 +1,5 @@
+<!-- このページはSESSIONチェックつけない -->
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -6,6 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/admin.css" />
   <title>Document</title>
+  <style>
+    .error-message {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
@@ -13,6 +21,14 @@
     <h2>スタッフログイン</h2>
   </section>
   <section class="main">
+    <?php
+    session_start();
+    if (isset($_SESSION["error_msg"])) {
+      echo '<p class="error-message">' . $_SESSION["error_msg"] . '</p>';
+      unset($_SESSION["error_msg"]);
+    }
+
+    ?>
     <h3>
       ※新規スタッフ、パスワードがわからなくなった人は各店舗責任者に連絡してください。
     </h3>

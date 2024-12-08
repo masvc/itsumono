@@ -1,15 +1,8 @@
 <?php
-
 session_start();
-
 include('../funcs.php');
-
 sschk();
-
 $pdo = db_connect();
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -23,9 +16,19 @@ $pdo = db_connect();
 </head>
 
 <body>
+
   <section class="header">
     <h1>スタッフ専用ページ</h1>
+    <p>ログイン中：
+      <?php echo h($_SESSION['sid']); ?>さん
+      <?php
+      if ($_SESSION['role_flg'] == 0) {
+        echo '';
+      } else if ($_SESSION['role_flg'] == 1) {
+        echo "(" . '責任者' . ")";
+      }; ?></p>
   </section>
+
   <section class="main">
     <h2>管理画面</h2>
     <div>
