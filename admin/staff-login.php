@@ -7,7 +7,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/admin.css" />
-  <title>Document</title>
+  <link rel="icon" href="../img/staff-favicon.png" />
+  <title>スタッフログイン</title>
   <style>
     .error-message {
       color: red;
