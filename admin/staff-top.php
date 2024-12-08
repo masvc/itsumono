@@ -1,8 +1,13 @@
 <?php
-include('../funcs.php');
+
 session_start();
 
-$_SESSION["sid"] = $sid;
+include('../funcs.php');
+
+sschk();
+
+$pdo = db_conn();
+
 
 
 ?>

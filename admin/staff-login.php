@@ -1,9 +1,3 @@
-<?php
-include('../funcs.php');
-session_start();
-?>
-
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -12,24 +6,9 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/admin.css" />
   <title>Document</title>
-  <style>
-    .error-message {
-      color: red;
-    }
-  </style>
-
 </head>
 
 <body>
-
-
-  <?php if (isset($_SESSION['error_message'])): ?> <!-- エラーメッセージがnullか確認  -->
-    <p class="error-message"><?php echo h($_SESSION['error_message']); ?></p>
-    <?php unset($_SESSION['error_message']); // メッセージを一度表示したら削除 
-    ?>
-  <?php endif; ?>
-
-
   <section class="header">
     <h2>スタッフログイン</h2>
   </section>
