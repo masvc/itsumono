@@ -40,13 +40,14 @@ session_start();
     <h4>BIYOUSHITSU 原宿店 責任者：吉田（090-1234-5678）</h4>
   </section>
   <section class="main">
-    <form method="post" action="staff-top.html" class="login-form">
+    <form method="post" action="staff-login-action.php" class="login-form">
       <div>
         <div>
           <label for="sid">スタッフID：</label>
           <input
             type="text"
             id="sid"
+            name="sid"
             placeholder="スタッフIDを入力してください" />
         </div>
         <div>
@@ -54,10 +55,11 @@ session_start();
           <input
             type="password"
             id="spw"
+            name="spw"
             placeholder="パスワードを入力してください" />
         </div>
         <div class="login-btn">
-          <button type="submit">ログイン</button>
+          <button type="submit" value="login">ログイン</button>
         </div>
       </div>
     </form>
