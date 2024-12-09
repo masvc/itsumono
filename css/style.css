@@ -1,0 +1,253 @@
+:root {
+  --primary-color: #a8cfae; /* メインカラー：柔らかいミント緑 */
+  --secondary-color: #98c09f; /* アクセントカラー：落ち着いたセージグリーン */
+  --background-color: #f8f9f8; /* 背景色：明るいオフホワイト */
+  --text-color: #4a5d4f; /* テキストカラー：深い緑がかったグレー */
+  --gray-color: #707070; /* グレー：ユーザー情報などに使用 */
+}
+
+* {
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--text-color);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+}
+
+.logo {
+  font-size: 25px;
+  color: var(--background-color);
+  font-weight: bold;
+  font-family: "Verdana", sans-serif;
+  letter-spacing: 0.1px;
+}
+
+.login {
+  padding: 8px 16px;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  transition: opacity 0.3s;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.top,
+.start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+}
+
+.start-button {
+  text-decoration: none;
+  color: white;
+  background-color: var(--secondary-color);
+  padding: 12px 24px;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 10px;
+}
+
+body,
+html {
+  margin: 0;
+  height: 100vh;
+}
+
+body.index {
+  background-color: var(--primary-color);
+}
+
+.wrapper {
+  height: 100%;
+  display: block;
+}
+
+img {
+  /* width: 250px; */
+  height: auto;
+  border-radius: 10%;
+  padding: 5px;
+}
+
+.indexpage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  gap: 60px;
+}
+
+.left-content {
+  flex: 0 0 45%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.left-content img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.right-content {
+  flex: 0 0 45%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app-title {
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.app-description {
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.download-section {
+  margin-bottom: 30px;
+}
+
+.download-input {
+  padding: 12px;
+  width: 300px;
+  border: 1px solid white;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.send-button {
+  padding: 12px 24px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 4px;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.app-store-button {
+  height: 40px;
+}
+
+.app-store-button img {
+  height: 100%;
+  width: auto;
+  border-radius: 0;
+}
+
+button.start-button {
+  text-decoration: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  padding: 12px 24px;
+  border-radius: 4px;
+}
+
+.start-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.start-buttons {
+  margin: 10px 0;
+}
+
+.start-buttons a {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-right: 10px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.start-buttons a:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* スマートフォン向けのスタイル */
+@media screen and (max-width: 768px) {
+  .indexpage {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .left-content,
+  .right-content {
+    flex: none;
+    width: 100%;
+  }
+
+  .left-content {
+    justify-content: center;
+  }
+
+  .left-content img {
+    max-width: 280px;
+  }
+
+  .app-title {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .app-description {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .start-buttons {
+    text-align: center;
+  }
+}
+
+.detail-link {
+  cursor: pointer;
+}
+
+.control-nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.control-nav-img {
+  width: 45px;
+  height: 45px;
+}
+
+.control-nav-button {
+  background-color: var(--primary-color);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
