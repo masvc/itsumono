@@ -1,6 +1,6 @@
 # ① アプリ名
 
-itsumono 〜あなたのいつもをもっと快適に〜
+「itsumono」 〜あなたのいつもをもっと快適に〜
 
 ## ② 課題内容（どんな作品か）
 
@@ -11,8 +11,11 @@ itsumono 〜あなたのいつもをもっと快適に〜
 ## ③ アプリのデプロイ URL
 
 デプロイしている場合は URL を記入（任意）
+
+ユーザー：スマホ推奨
 https://aamaa.jp/itsumono/
 
+ADMIN：PC想定
 https://aamaa.jp/itsumono/admin/staff-login.php
 
 ## ④ アプリのログイン用 ID または Password（ある場合）
