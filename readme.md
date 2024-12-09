@@ -11,6 +11,9 @@ itsumono 〜あなたのいつもをもっと快適に〜
 ## ③ アプリのデプロイ URL
 
 デプロイしている場合は URL を記入（任意）
+https://aamaa.jp/itsumono/
+
+https://aamaa.jp/itsumono/admin/staff-login.php
 
 ## ④ アプリのログイン用 ID または Password（ある場合）
 
