@@ -148,10 +148,10 @@ if ($status) {
     <p>ログイン中：<?php echo h($_SESSION['uname']); ?>さん</p>
 
     <select class="sort-order" id="sort-order">
-      <option value="asc">評価が高い順</option>
-      <option value="desc">評価が低い順</option>
-      <option value="desc">投稿日時が古い順</option>
-      <option value="asc">投稿日時が新しい順</option>
+      <option value="star-desc">評価が高い順</option>
+      <option value="star-asc">評価が低い順</option>
+      <option value="date-asc">投稿日時が古い順</option>
+      <option value="date-desc">投稿日時が新しい順</option>
     </select>
 
   </section>
@@ -197,9 +197,15 @@ if ($status) {
         var $items = $container.children('.detail-link').get();
 
         $items.sort(function(a, b) {
-          let starA = parseInt($(a).data('star'), 10);
-          let starB = parseInt($(b).data('star'), 10);
-          return order === 'asc' ? starB - starA : starA - starB;
+          if (order.includes('star')) {
+            let starA = parseInt($(a).data('star'), 10);
+            let starB = parseInt($(b).data('star'), 10);
+            return order === 'star-desc' ? starB - starA : starA - starB;
+          } else if (order.includes('date')) {
+            let dateA = new Date($(a).find('.ymd').text());
+            let dateB = new Date($(b).find('.ymd').text());
+            return order === 'date-desc' ? dateB - dateA : dateA - dateB;
+          }
         });
 
         $.each($items, function(index, item) {

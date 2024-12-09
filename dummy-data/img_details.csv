@@ -22,3 +22,4 @@ INSERT INTO img_details (id, uid, front_image, side_image, back_image, other_ima
 (21, 11, '../uploads/11/front1.jpeg', '../uploads/11/side1.jpeg', '../uploads/11/back1.jpeg', NULL, 1, 'カジュアルな日常', 21, '2023-10-31'),
 (22, 11, '../uploads/11/front2.jpeg', '../uploads/11/side2.jpeg', '../uploads/11/back2.jpeg', NULL, 3, '日常の更新', 22, '2023-11-01'),
 (23, 11, '../uploads/11/front3.jpeg', '../uploads/11/side3.jpeg', '../uploads/11/back3.jpeg', NULL, 4, 'お気に入り更新', 23, '2023-11-02');
+

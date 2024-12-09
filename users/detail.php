@@ -63,10 +63,6 @@ if ($status) {
       margin-bottom: 10px;
     }
 
-    .tag {
-      margin: 10px;
-    }
-
     .comment {
       margin-bottom: 10px;
     }
@@ -125,8 +121,6 @@ if ($status) {
           <?php endfor; ?>
         </div>
       </div>
-
-      <div class="tag">#ロング #前髪</div>
 
       <?php if (!empty($v['comment'])): ?>
         <div class="comment">
