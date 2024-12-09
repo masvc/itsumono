@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2024 年 12 月 09 日 10:26
+-- 生成日時: 2024 年 12 月 09 日 18:59
 -- サーバのバージョン： 10.4.28-MariaDB
 -- PHP のバージョン: 8.2.4
 
@@ -65,9 +65,11 @@ INSERT INTO `img_details` (`id`, `uid`, `front_image`, `side_image`, `back_image
 (18, 9, '../uploads/9/front2.jpeg', '../uploads/9/side2.jpeg', '../uploads/9/back2.jpeg', NULL, 4, 'ビジネススタイル', 18, '2023-10-28 00:00:00'),
 (19, 10, '../uploads/10/front1.jpeg', '../uploads/10/side1.jpeg', '../uploads/10/back1.jpeg', NULL, 5, 'フォーマルな装い', 19, '2023-10-29 00:00:00'),
 (20, 10, '../uploads/10/front2.jpeg', '../uploads/10/side2.jpeg', '../uploads/10/back2.jpeg', NULL, 2, 'フォーマルな更新', 20, '2023-10-30 00:00:00'),
-(21, 11, '../uploads/11/front1.jpeg', '../uploads/11/side1.jpeg', '../uploads/11/back1.jpeg', NULL, 1, 'カジュアルな日常', 21, '2023-10-31 00:00:00'),
-(22, 11, '../uploads/11/front2.jpeg', '../uploads/11/side2.jpeg', '../uploads/11/back2.jpeg', NULL, 3, '日常の更新', 22, '2023-11-01 00:00:00'),
-(23, 11, '../uploads/11/front3.jpeg', '../uploads/11/side3.jpeg', '../uploads/11/back3.jpeg', NULL, 4, 'お気に入り更新', 23, '2023-11-02 00:00:00');
+(21, 11, '../uploads/11/front1.jpeg', '../uploads/11/side1.jpeg', '../uploads/11/back1.jpeg', NULL, 4, 'カジュアルな感じがGOOD\r\n次回相談してみたい髪型！', 21, '2024-11-30 00:00:00'),
+(22, 11, '../uploads/11/front2.jpeg', '../uploads/11/side2.jpeg', '../uploads/11/back2.jpeg', NULL, 3, '今と似た感じの髪型。デフォルトとして保存しておく。', 22, '2023-11-12 00:00:00'),
+(23, 11, '../uploads/11/front3.jpeg', '../uploads/11/side3.jpeg', '../uploads/11/back3.jpeg', NULL, 4, 'おしゃれでかっこいい感じ。前髪が足りないかもしれないから相談してみたい。', 23, '2023-11-18 00:00:00'),
+(46, 11, '../uploads/11/front.jpeg', '../uploads/11/side.jpeg', NULL, '../uploads/11/other.jpeg', 5, '髪の毛が伸びてきたらパーマもいいかも。今は足りない、、', NULL, '2024-12-10 01:54:02'),
+(48, 11, '../uploads/11/front5.jpeg', '../uploads/11/side5.jpeg', '../uploads/11/back5.jpeg', NULL, 2, 'モデルさんがかっこよくて、自分だと似合わないかも。だけど、気になるので保存。', NULL, '2024-11-20 01:56:42');
 
 -- --------------------------------------------------------
 
@@ -215,17 +217,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `uname`, `email`, `upw`, `q1`, `q2`, `q3`, `life_flg`, `indate`) VALUES
-(1, '山田太郎', 'yamada@example.com', 'test', 1, 0, 1, 1, '2023-10-01 10:00:00'),
-(2, '鈴木花子', 'suzuki@example.com', 'test', 0, 1, 0, 1, '2023-10-02 11:00:00'),
-(3, '佐藤次郎', 'sato@example.com', 'test', 1, 1, 1, 0, '2023-10-03 12:00:00'),
-(4, '田中美咲', 'tanaka@example.com', 'test', 0, 0, 1, 1, '2023-10-04 13:00:00'),
-(5, '高橋健', 'takahashi@example.com', 'test', 1, 1, 0, 1, '2023-10-05 14:00:00'),
-(6, '伊藤舞', 'ito@example.com', 'test', 0, 1, 1, 0, '2023-10-06 15:00:00'),
-(7, '渡辺大輔', 'watanabe@example.com', 'test', 1, 0, 0, 1, '2023-10-07 16:00:00'),
-(8, '中村優子', 'nakamura@example.com', 'test', 0, 1, 1, 1, '2023-10-08 17:00:00'),
-(9, '小林直樹', 'kobayashi@example.com', 'test', 1, 1, 0, 0, '2023-10-09 18:00:00'),
-(10, '加藤愛', 'katou@example.com', 'test', 0, 0, 1, 1, '2023-10-10 19:00:00'),
-(11, '吉田 将人', 'yoshida@test.com', '$2y$10$xyhdWIP/VytN30iC56AEluJ5OnHoK2FyfdQi6YsgJjx3B.cwMYl9a', 1, 1, 1, 1, '2024-12-09 06:45:43');
+(1, '山田太郎', 'yamada@example.com', '$2y$10$WzcyNnLG1Vjuc7o6vjeFt.Ku5O.IiD8u6apGqN5nI10wO/AEDFI1C', 1, 0, 1, 1, '2023-10-01 10:00:00'),
+(2, '鈴木花子', 'suzuki@example.com', '$2y$10$epC4qQKXbHm3juiWMFh2x.hmILzdN0wb32UTc6lNUQFP2d2aFnq4C', 0, 1, 0, 1, '2023-10-02 11:00:00'),
+(3, '佐藤次郎', 'sato@example.com', '$2y$10$nKv/l.z31Cz9k6tPTKe3zO6ZzycRUSCqTdjNY090Zfcoesfvv5.AS', 1, 1, 1, 0, '2023-10-03 12:00:00'),
+(4, '田中美咲', 'tanaka@example.com', '$2y$10$9yTjbf3vsP4KeirO//W5GuYTmXz64uu1TWi8ho0R1gdALZrwBR0NS', 0, 0, 1, 1, '2023-10-04 13:00:00'),
+(5, '高橋健', 'takahashi@example.com', '$2y$10$W.81xvRF1mAmt/2i0kV/PO1klpJMMeIjlkHnNX6jw2eHxqq3nGWem', 1, 1, 0, 1, '2023-10-05 14:00:00'),
+(6, '伊藤舞', 'ito@example.com', '$2y$10$.Om1LVvyhoAmzMxskloqr.QmSuUJZaKQTRNAgNPIEb1TlS2O2Vyoy', 0, 1, 1, 0, '2023-10-06 15:00:00'),
+(7, '渡辺大輔', 'watanabe@example.com', '$2y$10$lHTVN4He5uxOM6gpZJJnQOGaS4.r6NsXfnkV54qa9Q/IS4oxTgqyG', 1, 0, 0, 1, '2023-10-07 16:00:00'),
+(8, '中村優子', 'nakamura@example.com', '$2y$10$pnliS4cFz3vrtiW9lUkbjO.aLTwgOoCZ6Ptm2GjzuEHZzsOmVfXPi', 0, 1, 1, 1, '2023-10-08 17:00:00'),
+(9, '小林直樹', 'kobayashi@example.com', '$2y$10$a8AakmS/KB6jP/ShCEmFsuEKaBq6fcIXjxQ59a69VQ2XQLjNkEENm', 1, 1, 0, 0, '2023-10-09 18:00:00'),
+(10, '加藤愛', 'katou@example.com', '$2y$10$Ue555aKfqNuo3PfdzkFiGueXAfZklxPO57ol7Sa6yB7N4fjVjIf9i', 0, 0, 1, 1, '2023-10-10 19:00:00'),
+(11, '吉田 テス男', 'yoshida@test.com', '$2y$10$YgU/nweB7h3y7aSniu5zYupYhj6/Q1XOxX07djkHt3oeYhBeBj1u.', 1, 1, 1, 1, '2024-12-09 21:13:23');
 
 --
 -- ダンプしたテーブルのインデックス
@@ -269,7 +271,7 @@ ALTER TABLE `users`
 -- テーブルの AUTO_INCREMENT `img_details`
 --
 ALTER TABLE `img_details`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- テーブルの AUTO_INCREMENT `reservation`
@@ -293,7 +295,7 @@ ALTER TABLE `tags`
 -- テーブルの AUTO_INCREMENT `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
